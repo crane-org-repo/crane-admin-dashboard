@@ -108,7 +108,7 @@ const Form = () => {
             title: values.title + " " + getRandomInt(1000),
             description: values.description + " " + getRandomInt(1000),
             startDate: startDate?.toISOString(),
-            company: "example company",
+            companyId: "cla3px41g00025a43z00lscfn",
           };
           createJob(values).then((jobs) => console.log(jobs));
         }}
@@ -181,32 +181,49 @@ const Form = () => {
               >
                 What are your job preferences?
               </InputLabel>
-              <MultiSelect
+              <Select
                 value={values.type}
-                handleChange={handleChange}
+                onChange={handleChange}
                 name="type"
-                options={jobTypeOptions}
-                touched={touched.type}
-                errors={errors.type}
-              />
-
-              <MultiSelect
+                error={!!touched.type && !!errors.type}
+              >
+                {jobTypeOptions.map((option) => {
+                  return (
+                    <MenuItem key={option} value={option}>
+                      {option}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
+              <Select
                 value={values.schedule}
-                handleChange={handleChange}
+                onChange={handleChange}
                 name="schedule"
-                options={jobScheduleOptions}
-                touched={touched.schedule}
-                errors={errors.schedule}
-              />
+                error={!!touched.schedule && !!errors.schedule}
+              >
+                {jobScheduleOptions.map((option) => {
+                  return (
+                    <MenuItem key={option} value={option}>
+                      {option}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
 
-              <MultiSelect
+              <Select
                 value={values.eduReq}
-                handleChange={handleChange}
+                onChange={handleChange}
                 name="education"
-                options={jobEduOptions}
-                touched={touched.eduReq}
-                errors={errors.eduReq}
-              />
+                error={!!touched.eduReq && !!errors.eduReq}
+              >
+                {jobEduOptions.map((option) => {
+                  return (
+                    <MenuItem key={option} value={option}>
+                      {option}
+                    </MenuItem>
+                  );
+                })}
+              </Select>
 
               <InputLabel
                 sx={{ gridColumn: "span 4", fontWeight: "bold", fontSize: 16 }}
@@ -215,7 +232,7 @@ const Form = () => {
               </InputLabel>
               <TextField
                 fullWidth
-                type="text"
+                type="number"
                 label="Minmum Salary"
                 onBlur={handleBlur}
                 onChange={handleChange}
@@ -272,7 +289,7 @@ const Form = () => {
               </InputLabel>
               <TextField
                 fullWidth
-                type="text"
+                type="number"
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.limit}
@@ -331,9 +348,9 @@ const initialValues = {
   minSalary: 2000,
   maxSalary: 3000,
   limit: 100,
-  type: ["PERMANENT"],
-  schedule: ["DAYSHIFT"],
-  eduReq: ["POLY"],
+  type: "PERMANENT",
+  schedule: "DAYSHIFT",
+  eduReq: "POLY",
   salaryRate: "Per Month",
   url: "example.com",
 };

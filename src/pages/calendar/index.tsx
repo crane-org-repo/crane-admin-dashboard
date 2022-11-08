@@ -68,7 +68,7 @@ const Calendar = () => {
             borderRadius: "4px",
           }}
         >
-          <Typography variant="h5">Events</Typography>
+          <Typography variant="h5">Interviews</Typography>
           <List>
             {currentEvents.map((event: EventApi) => (
               <ListItem
@@ -123,13 +123,13 @@ const Calendar = () => {
             initialEvents={[
               {
                 id: "12315",
-                title: "All-day event",
-                date: "2022-09-14",
+                title: "Interview with Raja",
+                date: "2022-11-14",
               },
               {
                 id: "5123",
-                title: "Timed event",
-                date: "2022-09-28",
+                title: "Interview with Alex",
+                date: "2022-11-28",
               },
             ]}
           />

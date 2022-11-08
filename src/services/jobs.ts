@@ -35,6 +35,8 @@ export async function getJobs(): Promise<JobProps[]> {
 }
 
 export async function createJob(data: JobProps) {
+  console.log("data");
+  console.log(data);
   return fetch(config.JOBS_PATH, {
     method: "POST",
     body: JSON.stringify(data),
