@@ -173,7 +173,9 @@ const Dashboard = () => {
               mr: "20px",
             }}
           >
-            Not enough data for this yet
+            <Typography fontWeight="bold" fontSize="20px">
+              Coming Soon!
+            </Typography>
           </Box>
         </Box>
 
