@@ -2,6 +2,7 @@ export const BASE_PATH = "https://crane-server-g54b4uymqq-as.a.run.app";
 
 // ----------------------------------------------------------------Applicant Paths---------------------------------------------------------------//
 export const USERS_PATH = BASE_PATH + "/users";
+export const APPLICANTS_PATH = BASE_PATH + "/applicant";
 
 // ----------------------------------------------------------------Jobs Paths---------------------------------------------------------------//
 export const JOBS_PATH = BASE_PATH + "/jobs";

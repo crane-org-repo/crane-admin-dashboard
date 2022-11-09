@@ -54,7 +54,7 @@ const Jobs = () => {
             if (typeof job.id !== "undefined") {
               return job.id;
             } else {
-              return 0;
+              return 1;
             }
           }}
           checkboxSelection

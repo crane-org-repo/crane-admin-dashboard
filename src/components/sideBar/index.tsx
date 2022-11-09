@@ -5,7 +5,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import MailIcon from "@mui/icons-material/Mail";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import PeopleIcon from "@mui/icons-material/People";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import DomainAddIcon from "@mui/icons-material/DomainAdd";
 import WorkIcon from "@mui/icons-material/Work";
 import { Box } from "@mui/material";
 import Divider from "@mui/material/Divider";
@@ -141,7 +141,7 @@ export default function MiniDrawer() {
           <ListItemLink
             to="/form"
             primary="Create Job"
-            icon={<PersonAddIcon />}
+            icon={<DomainAddIcon />}
           />
           <ListItemLink
             to="/applicants"

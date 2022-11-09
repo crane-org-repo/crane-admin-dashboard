@@ -1,4 +1,4 @@
-import { Box, Chip, Typography, useTheme } from "@mui/material";
+import { Box, Chip, Divider, Typography, useTheme } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { tokens } from "../../theme";
 
@@ -23,37 +23,45 @@ const DashBox = ({
   const salary = minSalary + " - " + maxSalary + " " + salaryRate;
 
   return (
-    <Box width="100%" m="0 30px">
-      <Box display="flex" justifyContent="left" alignItems="center" mb="5px">
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          sx={{ color: colors.grey[1000] }}
-        >
-          {title}
-        </Typography>
-      </Box>
-      <Box mb="5px">
-        <Chip
-          icon={<AttachMoneyIcon />}
-          label={salary}
-          variant="outlined"
-          size="small"
-        ></Chip>
+    <Box
+      width="100%"
+      m="0 30px"
+      display="flex"
+      flexDirection="column"
+      alignItems="space-between"
+    >
+      <Box display="flex" flexDirection="column" flexWrap="wrap">
+        <Box justifyContent="left" mb="5px">
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            sx={{ color: colors.grey[1000] }}
+          >
+            {title}
+          </Typography>
+        </Box>
+        <Box mb="5px">
+          <Chip
+            icon={<AttachMoneyIcon />}
+            label={salary}
+            variant="outlined"
+            size="small"
+          ></Chip>
+        </Box>
+        <Box mb="5px">
+          <Chip
+            icon={<AttachMoneyIcon />}
+            label="Poly"
+            variant="outlined"
+            size="small"
+          ></Chip>
+        </Box>
       </Box>
 
-      <Box mb="5px">
-        <Chip
-          icon={<AttachMoneyIcon />}
-          label="Poly"
-          variant="outlined"
-          size="small"
-        ></Chip>
-      </Box>
-
+      <Divider />
       <Box display="flex" justifyContent="center" alignItems="center" mt="2px">
         <Typography variant="subtitle1" sx={{ color: colors.grey[400] }}>
-          {description} + {description}
+          {description}
         </Typography>
       </Box>
     </Box>

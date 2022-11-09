@@ -76,6 +76,7 @@ const Form = () => {
               size="small"
               onClick={() => {
                 setSuccessUpload(false);
+                setJobUploadedCount(0);
               }}
             >
               <CloseIcon fontSize="inherit" />
@@ -110,7 +111,11 @@ const Form = () => {
             startDate: startDate?.toISOString(),
             companyId: "cla3px41g00025a43z00lscfn",
           };
-          createJob(values).then((jobs) => console.log(jobs));
+          createJob(values).then((jobs) => {
+            setSuccessUpload(true);
+            setJobUploadedCount(1);
+            console.log(jobs);
+          });
         }}
         initialValues={initialValues}
       >

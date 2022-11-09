@@ -4,17 +4,18 @@ import { tokens } from "../../theme";
 import Header from "../../components/header";
 import React from "react";
 import { applicantFieldColumns } from "../../utils/constants";
-import { UsersProps, getApplicants } from "../../services/applicants";
+import { getApplicants, ApplicantProps } from "../../services/applicants";
 
 const Applicants = () => {
-  const [applicants, setApplicants] = React.useState([{} as UsersProps]);
+  const [applicants, setApplicants] = React.useState([{} as ApplicantProps]);
 
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   React.useEffect(() => {
-    getApplicants().then((applicant) => setApplicants(applicant));
+    getApplicants().then((applicants) => setApplicants(applicants));
   }, []);
+
   const hello = "hell0";
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3, m: 0.2 }}>

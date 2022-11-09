@@ -80,7 +80,7 @@ export function getJobClosedCount(): Promise<number> {
 
 export function getRecentJobPosts(): Promise<RecentJobPostProp[]> {
   return fetch(
-    config.JOBS_COMPANY_PATH + "cla3px41g00025a43z00lscfn" + "/recent",
+    config.JOBS_COMPANY_PATH + "cla99iris00007343dan176a1" + "/recent",
     {
       headers: new Headers({
         Authorization: "Bearer " + config.ACCESS_TOKEN,

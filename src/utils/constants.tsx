@@ -117,6 +117,11 @@ export const applicantFieldColumns: GridColDef[] = [
     cellClassName: "email-column-cell",
   },
   {
+    field: "createdAt",
+    headerName: "Created At",
+    cellClassName: "created-at-column-cell",
+  },
+  {
     field: "firstName",
     headerName: "First Name",
     cellClassName: "first-name-column-cell",
@@ -125,10 +130,5 @@ export const applicantFieldColumns: GridColDef[] = [
     field: "lastName",
     headerName: "Last Name",
     cellClassName: "last-name-column-cell",
-  },
-  {
-    field: "resumeLink",
-    headerName: "Resume",
-    cellClassName: "resume-column-cell",
   },
 ];
