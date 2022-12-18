@@ -13,6 +13,9 @@ export const JOBS_COMPANY_PATH = JOBS_PATH + "/company/";
 // ----------------------------------------------------------------Company Paths---------------------------------------------------------------//
 export const COMPANY_PATH = BASE_PATH + "/company";
 
+// ----------------------------------------------------------------Resume Paths---------------------------------------------------------------//
+export const RESUME_PATH = BASE_PATH + "/resume";
+
 export const COMPAN_NAME_PATH = COMPANY_PATH + "/name/";
 
 export const ACCESS_TOKEN =

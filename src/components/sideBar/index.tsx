@@ -2,8 +2,6 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import MailIcon from "@mui/icons-material/Mail";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import PeopleIcon from "@mui/icons-material/People";
 import DomainAddIcon from "@mui/icons-material/DomainAdd";
 import WorkIcon from "@mui/icons-material/Work";
@@ -13,15 +11,14 @@ import MuiDrawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { CSSObject, styled, Theme, useTheme } from "@mui/material/styles";
-import * as React from "react";
 import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
 } from "react-router-dom";
+import * as React from "react";
 import logo from "./logo.jpeg";
 
 const drawerWidth = 240;
@@ -99,7 +96,7 @@ function ListItemLink(props: ListItemLinkProps) {
   );
 }
 
-export default function MiniDrawer() {
+export default function SideBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -136,49 +133,9 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          <ListItemLink to="/" primary="Dashboard" icon={<DashboardIcon />} />
-          <ListItemLink to="/jobs" primary="Jobs" icon={<WorkIcon />} />
-          <ListItemLink
-            to="/form"
-            primary="Create Job"
-            icon={<DomainAddIcon />}
-          />
-          <ListItemLink
-            to="/applicants"
-            primary="Applicants"
-            icon={<PeopleIcon />}
-          />
-          <ListItemLink
-            to="/calendar"
-            primary="Calendar"
-            icon={<CalendarMonthIcon />}
-          />
+          <ListItemLink to="/" primary="Resume Builder" icon={<WorkIcon />} />
         </List>
         <Divider />
-        {/* <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List> */}
       </Drawer>
     </Box>
   );
