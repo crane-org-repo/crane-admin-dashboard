@@ -4,6 +4,10 @@ export const BASE_PATH = "https://crane-server-g54b4uymqq-as.a.run.app";
 export const USERS_PATH = BASE_PATH + "/users";
 export const APPLICANTS_PATH = BASE_PATH + "/applicant";
 
+// ----------------------------------------------------------------Firebase Paths---------------------------------------------------------------//
+export const AUTH_PATH = BASE_PATH + "/login";
+export const AUTH_FIREBASE_PATH = AUTH_PATH + "/firebase";
+
 // ----------------------------------------------------------------Jobs Paths---------------------------------------------------------------//
 export const JOBS_PATH = BASE_PATH + "/jobs";
 export const JOBS_BATCH_PATH = JOBS_PATH + "/batch";

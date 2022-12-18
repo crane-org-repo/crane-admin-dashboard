@@ -1,9 +1,5 @@
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PeopleIcon from "@mui/icons-material/People";
-import DomainAddIcon from "@mui/icons-material/DomainAdd";
 import WorkIcon from "@mui/icons-material/Work";
 import { Box } from "@mui/material";
 import Divider from "@mui/material/Divider";
@@ -13,12 +9,12 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { CSSObject, styled, Theme, useTheme } from "@mui/material/styles";
+import { CSSObject, styled, Theme } from "@mui/material/styles";
+import * as React from "react";
 import {
   Link as RouterLink,
   LinkProps as RouterLinkProps,
 } from "react-router-dom";
-import * as React from "react";
 import logo from "./logo.jpeg";
 
 const drawerWidth = 240;
@@ -97,7 +93,6 @@ function ListItemLink(props: ListItemLinkProps) {
 }
 
 export default function SideBar() {
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {

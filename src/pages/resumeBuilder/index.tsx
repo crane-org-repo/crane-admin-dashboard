@@ -1,16 +1,13 @@
 import {
   Box,
   Button,
-  InputLabel,
   MenuItem,
   Select,
   TextField,
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import React from "react";
-import { Controller, useFieldArray, useForm } from "react-hook-form";
-import * as yup from "yup";
+import { useForm } from "react-hook-form";
 import SideBar from "../../components/sideBar";
 import { createResume } from "../../services/resume";
 
